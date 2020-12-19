@@ -1,0 +1,23 @@
+<div class="container">
+ 
+  <h2>Posts</h2>
+  <div class="well">
+    <%= link_to "New Post", new_post_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-post"></div>
+ 
+  <table id class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+    </thead>
+    <tbody id="posts">
+    <%= render @posts %>
+    </tbody>
+  </table>
+ 
+  <%= render 'dialog' %>
+ 
+</div>

@@ -1,0 +1,9 @@
+<tr id="post_<%= post.id %>">
+  <td><%= post.titel %></td>
+  <td><%= post.body %></td>
+ 
+  <td>
+    <%= link_to 'Edit', edit_post_path(post), remote: true, :class => 'btn btn-sm btn-info' %>
+    <%= link_to 'Delete', post, remote: true, :method => :delete, data: {confirm: "Delete Post: #{post.titel} #{post.body}"}, :class => 'btn btn-sm btn-danger' %>
+  </td>
+</tr>
