@@ -1,4 +1,7 @@
 <div class="container">
+  <% current_user.image.each do |image| %>
+  <%= image_tag image, :size => "200x150" %> <br />
+<% end %>
  
   <h2>Posts</h2>
   <div class="well">
@@ -19,5 +22,4 @@
   </table>
  
   <%= render 'dialog' %>
- 
 </div>

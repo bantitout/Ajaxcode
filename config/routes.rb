@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  put 'image/update',to: "image#update"
   devise_for :users
   root to: 'posts#index'
   resources :posts
